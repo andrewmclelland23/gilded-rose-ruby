@@ -52,6 +52,7 @@ describe 'Gilded Rose text test' do
         text+= "#{item}\n"
       end
       gilded_rose.update_quality
+      gilded_rose.update_sell_in
     end
     expect(text).to eq expected_response
   end
