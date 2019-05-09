@@ -4,20 +4,10 @@ describe GildedRose do
 
   describe "#update_sell_in" do
 
-    context "normal item" do
-      it 'should reduce sell_in by 1' do
-        item = Item.new("foo", 5, 5)
-        GildedRose.new([item]).update_sell_in(item)
-        expect(item.sell_in).to eq 4
-      end
-    end
-
-    context "Sulfuras special item" do
-      it 'should not change sell_in' do
-        item = Item.new("Sulfuras, Hand of Ragnaros", 5, 5)
-        GildedRose.new([item]).update_sell_in(item)
-        expect(item.sell_in).to eq 5
-      end
+    it 'should reduce sell_in by 1' do
+      item = Item.new("foo", 5, 5)
+      GildedRose.new([item]).update_sell_in(item)
+      expect(item.sell_in).to eq 4
     end
   end
 
